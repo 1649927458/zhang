@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="创意设计师的视觉作品展示平台，专注UI/UX设计与品牌视觉解决方案">
+    <title>星辰设计工坊 | StarDesign Studio</title>
+    <style>
+        /* 基础样式 */
+        :root {
+            --primary-color: #2A2A2A;
+            --accent-color: #FF6B6B;
+            --text-light: #F8F9FA;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            background: var(--text-light);
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background: var(--primary-color);
+            padding: 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* 英雄区 */
+        .hero {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://source.unsplash.com/random/1920x1080');
+            background-size: cover;
+            color: var(--text-light);
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* 作品网格 */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .portfolio-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+        .portfolio-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .portfolio-info {
+            padding: 1.5rem;
+        }
+        .portfolio-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        .tag {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li>首页</li>
+            <li>作品集</li>
+            <li>关于</li>
+            <li>联系</li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>用设计讲述品牌故事</h1>
+        <p>专注视觉传达与用户体验设计</p >
+    </section>
+
+    <main class="portfolio-grid" id="portfolio">
+        <!-- 作品项1 -->
+        <article class="portfolio-item">
+                       <div class="portfolio-info">
+                <h3>餐饮APP界面设计</h3>
+                <p>为连锁餐厅打造的点餐系统UI/UX设计</p >
+                <div class="portfolio-tags">
+                    <span class="tag">UI设计</span>
+                    <span class="tag">用户体验</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 作品项2 -->
+        <article class="portfolio-item">
+                        <div class="portfolio-info">
+                <h3>咖啡品牌视觉升级</h3>
+                <p>从LOGO到包装的全套品牌视觉方案</p >
+                <div class="portfolio-tags">
+                    <span class="tag">品牌设计</span>
+                    <span class="tag">包装设计</span>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
